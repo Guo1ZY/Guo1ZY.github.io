@@ -25,15 +25,15 @@
   
 <link rel="stylesheet" href="/css/loader.css">
 
-  <meta name="description" content="培训1——OpenCV基础学习笔记 本文是基于本人在电子科技大学ROBOCON 比赛LImiti战队期间学习笔记  0. 安装OpenCV （详细安装过程csdn上搜索即可） 输入 1sudo apt-get install libopencv-dev 或者 使用源码安装 如果在终端运行的操作 12345mkdir buildcd buildcmake ..make .&#x2F;xxxx(the exc">
+  <meta name="description" content="培训1——OpenCV基础学习笔记 本文是基于本人在电子科技大学ROBOCON 比赛LImiti战队期间学习笔记 环境： 系统：ubuntu 20.04LTS 电脑配置：intel 13900K+nvidia GPU 3080 10g +32g RAM +2T SSD 依赖：nvidia驱动 +cuda11.8+cudnn 8.6.5  0. 安装OpenCV （详细安装过程csdn上搜索即可）">
 <meta property="og:type" content="article">
 <meta property="og:title" content="opencv入门">
 <meta property="og:url" content="http://guo1zy.github.io/2024/04/14/opencv%E5%85%A5%E9%97%A8/index.html">
 <meta property="og:site_name" content="小果的个人博客">
-<meta property="og:description" content="培训1——OpenCV基础学习笔记 本文是基于本人在电子科技大学ROBOCON 比赛LImiti战队期间学习笔记  0. 安装OpenCV （详细安装过程csdn上搜索即可） 输入 1sudo apt-get install libopencv-dev 或者 使用源码安装 如果在终端运行的操作 12345mkdir buildcd buildcmake ..make .&#x2F;xxxx(the exc">
+<meta property="og:description" content="培训1——OpenCV基础学习笔记 本文是基于本人在电子科技大学ROBOCON 比赛LImiti战队期间学习笔记 环境： 系统：ubuntu 20.04LTS 电脑配置：intel 13900K+nvidia GPU 3080 10g +32g RAM +2T SSD 依赖：nvidia驱动 +cuda11.8+cudnn 8.6.5  0. 安装OpenCV （详细安装过程csdn上搜索即可）">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-04-14T14:44:26.000Z">
-<meta property="article:modified_time" content="2024-04-15T13:25:33.186Z">
+<meta property="article:modified_time" content="2024-04-15T13:35:58.491Z">
 <meta property="article:author" content="小果">
 <meta property="article:tag" content="视觉">
 <meta property="article:tag" content="opencv">
@@ -291,8 +291,16 @@
       
         <h1 id="培训1opencv基础学习笔记"><a class="markdownIt-Anchor" href="#培训1opencv基础学习笔记"></a> 培训1——OpenCV基础学习笔记</h1>
 <p><u>本文是基于本人在电子科技大学ROBOCON 比赛LImiti战队期间学习笔记</u></p>
+<p>环境：</p>
+<p>系统：ubuntu 20.04LTS</p>
+<p>电脑配置：intel 13900K+nvidia GPU 3080 10g +32g RAM +2T SSD</p>
+<p>依赖：nvidia驱动 +cuda11.8+cudnn 8.6.5</p>
 <h2 id="0-安装opencv"><a class="markdownIt-Anchor" href="#0-安装opencv"></a> 0. 安装OpenCV</h2>
 <p>（详细安装过程csdn上搜索即可）</p>
+<p>我安装的版本是opencv 4.2  /4.7  /4.8   c++</p>
+<p>可以都编译好，需要哪个版本的时候</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo make install </span><br></pre></td></tr></table></figure>
+<p>就行。</p>
 <p>输入</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install libopencv-dev</span><br></pre></td></tr></table></figure>
 <p>或者 使用源码安装</p>
@@ -578,7 +586,7 @@ Shi-Tomasi 角点检测常常被视为 Harris 角点检测的改进版本，通�
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://guo1zy.github.io/2024/04/14/opencv%E5%85%A5%E9%97%A8/" data-id="clv0zml5o0003zsftbloqgs52" data-title="opencv入门" class="article-share-link">分享</a>
+      <a data-url="http://guo1zy.github.io/2024/04/14/opencv%E5%85%A5%E9%97%A8/" data-id="clv1009dw0003g0ft842g5wr9" data-title="opencv入门" class="article-share-link">分享</a>
       
       
       
@@ -599,7 +607,7 @@ Shi-Tomasi 角点检测常常被视为 Harris 角点检测的改进版本，通�
       
         
         
-          <img data-src="/covers/opencv_1.jpg" data-sizes="auto" alt="Hello World" class="lazyload">
+          <img data-src="https://github.com/Guo1ZY/Guo1ZY.github.io/blob/master/covers/opencv_1.jpg" data-sizes="auto" alt="Hello World" class="lazyload">
         
       
       <a href="/2024/04/14/hello-world/"></a>
@@ -647,7 +655,7 @@ Shi-Tomasi 角点检测常常被视为 Harris 角点检测的改进版本，通�
       
         <div>
           <span class="icon-brush"></span>
-          9.9k
+          10k
           &nbsp;|&nbsp;
           <span class="icon-coffee"></span>
           00:41
