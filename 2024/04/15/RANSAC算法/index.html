@@ -38,7 +38,7 @@
 <meta property="og:image" content="http://guo1zy.github.io/imgs/RANSAC%E7%AE%97%E6%B3%95/f1e20f100e544d208924d7b06dee3389-1713189284706-5.png">
 <meta property="og:image" content="http://guo1zy.github.io/imgs/RANSAC%E7%AE%97%E6%B3%95/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARmlnaHRpbmdfWEg=,size_8,color_FFFFFF,t_70,g_se,x_16.png">
 <meta property="article:published_time" content="2024-04-15T13:44:16.000Z">
-<meta property="article:modified_time" content="2024-04-16T01:10:43.171Z">
+<meta property="article:modified_time" content="2024-04-16T01:11:32.848Z">
 <meta property="article:author" content="小果">
 <meta property="article:tag" content="视觉">
 <meta property="article:tag" content="pcl">
@@ -315,17 +315,17 @@
 </code></pre>
 <h3 id="2迭代次数的公式"><a class="markdownIt-Anchor" href="#2迭代次数的公式"></a> 2.迭代次数的公式</h3>
 <p>1、n数据中内点所占的比例（内点的概率p）：<br />
-<img src="/imgs/RANSAC%E7%AE%97%E6%B3%95/28116af535cf4625a9ecbbcc932f479e-1713189252449-1.png" alt="在这里插入图片描述" /></p>
+<img src="/imgs/RANSAC%E7%AE%97%E6%B3%95/28116af535cf4625a9ecbbcc932f479e-1713189252449-1.png" alt="" /></p>
 <p>2、选取的K个点至少有一个是外点的概率：</p>
-<p><img src="/imgs/RANSAC%E7%AE%97%E6%B3%95/d5df597271324925b2d0e9ef7fe38a12-1713189261188-3.png" alt="在这里插入图片描述" /></p>
+<p><img src="/imgs/RANSAC%E7%AE%97%E6%B3%95/d5df597271324925b2d0e9ef7fe38a12-1713189261188-3.png" alt="" /></p>
 <p>3、因此就能得到迭代M次的情况下，选取点都是外点的概率，进而得到迭代M次中，至少有一次选取点k个点都是内点的概率，也就是正确模型的概率：z一般要求满足大于95%即可。</p>
-<p><img src="/imgs/RANSAC%E7%AE%97%E6%B3%95/3b4f2822506e4a4996f38ba66bc4f34f.png" alt="在这里插入图片描述" /></p>
+<p><img src="/imgs/RANSAC%E7%AE%97%E6%B3%95/3b4f2822506e4a4996f38ba66bc4f34f.png" alt="" /></p>
 <p>4、最终得到迭代次数M:<br />
 M = log(1-z)/log(1-p^k )</p>
 <h2 id="三-最小二乘法"><a class="markdownIt-Anchor" href="#三-最小二乘法"></a> 三、最小二乘法</h2>
 <h3 id="1-最小二乘法的主要思想"><a class="markdownIt-Anchor" href="#1-最小二乘法的主要思想"></a> 1、最小二乘法的主要思想</h3>
 <p>通过确定未知参数（通常是一个参数矩阵），来使得真实值和预测值的误差（也称残差）平方和最小，其计算公式为<br />
-<img src="/imgs/RANSAC%E7%AE%97%E6%B3%95/f1e20f100e544d208924d7b06dee3389-1713189284706-5.png" alt="在这里插入图片描述" /><br />
+<img src="/imgs/RANSAC%E7%AE%97%E6%B3%95/f1e20f100e544d208924d7b06dee3389-1713189284706-5.png" alt="" /><br />
 其中 yi是真实值，yi^是对应的预测值。<br />
 下图中，红色为数据点，蓝色为最小二乘法求得的最佳解，绿色即为误差</p>
 <p>图中有四个数据点分别为：(1, 6), (2, 5), (3, 7), (4, 10)。显然，最佳解(3, 7)</p>
@@ -335,7 +335,7 @@ M = log(1-z)/log(1-p^k )</p>
 最小二乘法：适用于误差比较小的情况
 </code></pre>
 <p>如下图所示，在误差比较大的情况下，肉眼也能看出拟合出的直线，但用最小二乘法拟合的直线却是错误的。而用RANSAC算法却能成功拟合。<br />
-<img src="/imgs/RANSAC%E7%AE%97%E6%B3%95/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARmlnaHRpbmdfWEg=,size_8,color_FFFFFF,t_70,g_se,x_16.png" alt="在这里插入图片描述" /></p>
+<img src="/imgs/RANSAC%E7%AE%97%E6%B3%95/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARmlnaHRpbmdfWEg=,size_8,color_FFFFFF,t_70,g_se,x_16.png" alt="" /></p>
 <h2 id="五-ransac-算法的优缺点"><a class="markdownIt-Anchor" href="#五-ransac-算法的优缺点"></a> 五、RANSAC 算法的优缺点</h2>
 <p>优点：当数据中有大量的异常数据时，也能高精度的进行估计拟合。</p>
 <p>缺点：对于异常数据超过50%的时候，拟合效果不佳。需要设置特定于问题的阈值。迭代次数若受到限制，那么达到迭代次数时拟合出来的模型可能并不是最佳模型。特定数据只能拟合出一个模型，一般多模型拟合采用霍夫变换。</p>
@@ -345,7 +345,7 @@ M = log(1-z)/log(1-p^k )</p>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://guo1zy.github.io/2024/04/15/RANSAC%E7%AE%97%E6%B3%95/" data-id="clv1otgbc000170ft6t4d6sos" data-title="RANSAC算法" class="article-share-link">分享</a>
+      <a data-url="http://guo1zy.github.io/2024/04/15/RANSAC%E7%AE%97%E6%B3%95/" data-id="clv1ouhby0001lwft6ebdayzg" data-title="RANSAC算法" class="article-share-link">分享</a>
       
       
       
